@@ -1,0 +1,59 @@
+.gallery {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1920px;
+    height: 800px
+}
+
+.gallery > p {
+    color: #7657be;
+    font: 30pt serif;
+    margin: 50px 20px;
+}
+
+.photos {
+    display: inline-block;
+    margin: 0 auto;
+    height: 650px;
+    text-align: center; 
+}
+
+.photos > img {
+    margin: 20px;
+    width: 250px;
+    height: 140px;
+}
+
+.photos > img.opened {
+    width: 100%;
+    height: 100%;
+}
+
+.pages {
+    position: relative;
+    clear: left;
+    margin: 0 auto;
+    border-top: solid 1px #7657be;
+    border-bottom: solid 1px #7657be;
+}
+
+.pages > ul {
+    text-align: center;
+}
+
+.pages > ul > li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px;
+    font: bold 20px serif;
+    color: #7657be;
+}
+
+.pages > ul > li:hover {
+    cursor: pointer;
+}
+
+.pages > ul > li.active {
+    color: orange;
+}
