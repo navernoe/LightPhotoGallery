@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build-babel": "npx babel app --out-dir dist/app",
+    "build-webpack": "webpack",
+    "build": "npm run build-webpack && npm run build-babel",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-watch": "^7.0.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
