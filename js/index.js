@@ -1,10 +1,11 @@
 
 import $ from "jquery";
 import imgsListJson from "../data/imgsList.json";
+import Lightbox from "./Lightbox";
 
 const imgsList = imgsListJson.imgsList;
 const totalImgsCount = imgsList.length;
-const imgsPath = "./img/";
+const imgsPath = "./img/galleryImgs/";
 const countLimit = 12; // кол-во изображений на одной странице
 
 const generateImgs = (pageNumber) => {
@@ -46,20 +47,13 @@ const onClickPageNumber = (e) => {
     generateImgs(pageNumber);
 };
 
-const onClickImg = (e) => {
-    const path = e.originalEvent.path;
-    const imgClicked = path.filter((el) => el.localName == "img")[0];
-    imgClicked.classList.add("opened");
-};
-
-
 $(document).ready( function(){
    
     const pageNumber = 0; // при открытии показываем самую первую страницу
     generateImgs(pageNumber);
     generatePagesNumbers();
 
-    $(".pages > ul > li").click(onClickPageNumber);
-    $(".photos").click(onClickImg);
+    const lightbox = new Lightbox;
 
+    $(".pages > ul > li").click(onClickPageNumber);
 })
