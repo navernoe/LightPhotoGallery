@@ -15,12 +15,13 @@ const generateImgs = (pageNumber) => {
     let endImgNumber = startImgNumber + countLimit;
     endImgNumber = endImgNumber > totalImgsCount ? totalImgsCount : endImgNumber;
 
+    let imgs = "";
     for(let i = startImgNumber; i < endImgNumber; i++) {
         const imgName = imgsList[i];
         const img = `<img src="${imgsPath}${imgName}" alt="${imgName}" data-lightbox="gallery" />`;
-        $(".photos").append(img);
-        
+        imgs += img;
     }
+    $(".photos").append(imgs);
 };
 
 const generatePagesNumbers = () => {
