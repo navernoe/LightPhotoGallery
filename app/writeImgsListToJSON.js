@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const imgsFolder = "img";
+const imgsFolder = "img/galleryImgs";
 const imgsListJsonPath = "data/imgsList.json";
 
 export default () => {
